@@ -24,6 +24,7 @@ connectDB();
 app.use("/api/form", formRoutes);
 
 // Start Server
-app.listen(PORT, () => {
+/*app.listen(PORT, () => {
   console.log(`Server started at port ${PORT}`);
-});
+});*/
+export default app;
