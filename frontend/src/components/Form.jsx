@@ -47,11 +47,14 @@ const ContactForm = () => {
       setSuccessMessage({ text: "Submitting...", type: "success" });
 
       try {
-        const response = await fetch("http://localhost:3000/api/form/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          "https://landingpage-backend-x48v.onrender.com/api/form/submit",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          }
+        );
         console.log("Raw response:", response);
 
         const data = await response.json();
