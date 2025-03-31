@@ -60,7 +60,10 @@ router.post("/submit", async (req, res) => {
             }</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">📝 Message:</td><td style="padding: 8px;">${message}</td></tr>
           </table>
-          <p style="margin-top: 20px; font-size: 14px;">📅 Submitted on: ${new Date().toLocaleString()}</p>
+          <p style="margin-top: 20px; font-size: 14px;">📅 Submitted on: ${new Date().toLocaleString(
+            "en-IN",
+            { timeZone: "Asia/Kolkata" }
+          )}</p>
           <hr>
           <p style="font-size: 12px; color: #666;">This is an automated email. Please do not reply.</p>
         </div>
